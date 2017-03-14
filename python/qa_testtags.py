@@ -49,9 +49,9 @@ class qa_testtags (gr_unittest.TestCase):
         self.tb.run ()
         # check data
         print "current tags:"
-        received_tags = gr.pmt.to_python(tag_dst.current_tags())
+        received_tags = tag_dst.current_tags()
         for rx_tag in received_tags:
-            print rx_tag
+            print gr.tag_utils.tag_to_python(rx_tag)
         print "data:"
         print dst.data()
 
